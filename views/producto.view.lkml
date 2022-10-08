@@ -12,21 +12,26 @@ view: producto {
   # This dimension will be called "Categoria" in Explore.
 
   dimension: categoria {
+    label: "Categoria"
     type: string
     sql: ${TABLE}.Categoria ;;
   }
 
   dimension: id_producto {
+    hidden: yes
+    primary_key: yes
     type: string
     sql: ${TABLE}.ID_producto ;;
   }
 
   dimension: nombre_producto {
+    label: "Nombre"
     type: string
     sql: ${TABLE}.Nombre_producto ;;
   }
 
   dimension: subcategoria {
+    label: "Categoria"
     type: string
     sql: ${TABLE}.Subcategoria ;;
   }

@@ -12,6 +12,7 @@ view: pedidos {
   # This dimension will be called "Beneficio" in Explore.
 
   dimension: beneficio {
+    label: "Ganancia"
     type: number
     sql: ${TABLE}.Beneficio ;;
   }
@@ -21,26 +22,31 @@ view: pedidos {
   # Click on the type parameter to see all the options in the Quick Help panel on the right.
 
   measure: total_beneficio {
+    label: " Ganancia total"
     type: sum
     sql: ${beneficio} ;;
   }
 
   measure: average_beneficio {
+    label: "Ganancia promedio"
     type: average
     sql: ${beneficio} ;;
   }
 
   dimension: cantidad {
+    label: "Cantidad"
     type: number
     sql: ${TABLE}.Cantidad ;;
   }
 
   dimension: costo_envio {
+    label: "Costo del envio"
     type: number
     sql: ${TABLE}.Costo_envio ;;
   }
 
   dimension: descuento {
+    hidden:  yes
     type: number
     sql: ${TABLE}.Descuento ;;
   }
@@ -49,6 +55,7 @@ view: pedidos {
   # Looker converts dates and timestamps to the specified timeframes within the dimension group.
 
   dimension_group: fecha_envio {
+    label: "Fecha del envio"
     type: time
     timeframes: [
       raw,
@@ -64,6 +71,7 @@ view: pedidos {
   }
 
   dimension_group: fecha_pedido {
+    label: "Fecha del pedido"
     type: time
     timeframes: [
       raw,
@@ -79,41 +87,50 @@ view: pedidos {
   }
 
   dimension: id_cliente {
+    hidden:  yes
     type: string
     sql: ${TABLE}.ID_cliente ;;
   }
 
   dimension: id_fila {
+    hidden:  yes
     type: number
     sql: ${TABLE}.ID_fila ;;
   }
 
   dimension: id_mercado {
+    hidden:  yes
     type: string
     sql: ${TABLE}.Id_Mercado ;;
   }
 
   dimension: id_pedido {
+    hidden:  yes
+    primary_key: yes
     type: string
     sql: ${TABLE}.ID_pedido ;;
   }
 
   dimension: id_producto {
+    hidden:  yes
     type: string
     sql: ${TABLE}.ID_producto ;;
   }
 
   dimension: modo_envio {
+    label: "Medio de envio"
     type: string
     sql: ${TABLE}.Modo_envio ;;
   }
 
   dimension: prioridad_pedido {
+    label: "Prioridad del envio"
     type: string
     sql: ${TABLE}.Prioridad_pedido ;;
   }
 
   dimension: ventas {
+    label: "Cantidad de ventas"
     type: number
     sql: ${TABLE}.Ventas ;;
   }

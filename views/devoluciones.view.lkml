@@ -17,6 +17,7 @@ view: devoluciones {
   }
 
   dimension: id_pedido {
+    primary_key: yes
     type: string
     sql: ${TABLE}.ID_pedido ;;
   }

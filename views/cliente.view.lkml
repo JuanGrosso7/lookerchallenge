@@ -12,6 +12,7 @@ view: cliente {
   # This dimension will be called "ID Cliente" in Explore.
 
   dimension: id_cliente {
+    primary_key: yes
     type: string
     sql: ${TABLE}.ID_cliente ;;
   }

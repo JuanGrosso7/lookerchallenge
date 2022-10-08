@@ -12,31 +12,38 @@ view: mercado {
   # This dimension will be called "Ciudad" in Explore.
 
   dimension: ciudad {
+    label: "Ciudad"
     type: string
     sql: ${TABLE}.Ciudad ;;
   }
 
   dimension: estado {
+    label: "Estado"
     type: string
     sql: ${TABLE}.Estado ;;
   }
 
   dimension: id_mercado {
+    hidden: yes
+    primary_key: yes
     type: string
     sql: ${TABLE}.Id_Mercado ;;
   }
 
-  dimension: mercado {
+  dimension: mercado {label: "Mercado"
+
     type: string
     sql: ${TABLE}.Mercado ;;
   }
 
   dimension: pais {
+    label: "País"
     type: string
     sql: ${TABLE}.Pais ;;
   }
 
   dimension: region {
+    label: "Región"
     type: string
     sql: ${TABLE}.Region ;;
   }

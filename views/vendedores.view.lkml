@@ -12,11 +12,14 @@ view: vendedores {
   # This dimension will be called "Region" in Explore.
 
   dimension: region {
+    label: "Región"
     type: string
     sql: ${TABLE}.Region ;;
   }
 
   dimension: vendedor {
+    label: "Vendedor"
+    primary_key: yes
     type: string
     sql: ${TABLE}.Vendedor ;;
   }
