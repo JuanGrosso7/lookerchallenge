@@ -12,17 +12,20 @@ view: cliente {
   # This dimension will be called "ID Cliente" in Explore.
 
   dimension: id_cliente {
+    hidden: yes
     primary_key: yes
     type: string
     sql: ${TABLE}.ID_cliente ;;
   }
 
   dimension: nombre_cliente {
+    label: "Nombre"
     type: string
     sql: ${TABLE}.Nombre_cliente ;;
   }
 
   dimension: segmento {
+    label: "Segmento"
     type: string
     sql: ${TABLE}.Segmento ;;
   }

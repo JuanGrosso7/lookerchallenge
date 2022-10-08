@@ -12,17 +12,20 @@ view: devoluciones {
   # This dimension will be called "Devuelto" in Explore.
 
   dimension: devuelto {
+    label: "Devuelto"
     type: string
     sql: ${TABLE}.Devuelto ;;
   }
 
   dimension: id_pedido {
+    hidden: yes
     primary_key: yes
     type: string
     sql: ${TABLE}.ID_pedido ;;
   }
 
   dimension: region {
+    label: "Región"
     type: string
     sql: ${TABLE}.Region ;;
   }
