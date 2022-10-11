@@ -36,15 +36,15 @@ relationship: one_to_one
   }
 
   join: producto {
-    type: inner
+    type: left_outer
     sql_on: ${pedidos.id_producto} = ${producto.id_producto} ;;
-relationship: one_to_one
+relationship: many_to_one
   }
 
   join: cliente {
     type: left_outer
     sql_on: ${pedidos.id_cliente} = ${cliente.id_cliente} ;;
-relationship: one_to_one
+relationship: many_to_one
   }
 
   join: vendedores {
@@ -52,4 +52,10 @@ relationship: one_to_one
     sql_on: ${devoluciones.region} = ${vendedores.region} ;;
     relationship: one_to_one
   }
+  join: mercado {
+    type: left_outer
+    sql_on: ${vendedores.region} = ${mercado.region} ;;
+    relationship: one_to_one
+  }
+
 }
