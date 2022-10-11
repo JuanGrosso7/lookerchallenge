@@ -31,7 +31,7 @@ view: producto {
   }
 
   dimension: subcategoria {
-    label: "Subcategoria"
+    label: "Sub-categoria"
     type: string
     sql: ${TABLE}.Subcategoria ;;
   }
