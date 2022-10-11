@@ -25,6 +25,7 @@ view: devoluciones {
   }
 
   dimension: region {
+    primary_key: yes
     label: "Región"
     type: string
     sql: ${TABLE}.Region ;;
