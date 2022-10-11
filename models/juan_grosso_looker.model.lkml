@@ -1,7 +1,7 @@
-# Define the database connection to be used for this model.
+
 connection: "looker-challenge"
 
-# include all the views
+
 include: "/views/**/*.view"
 
 # Datagroups define a caching policy for an Explore. To learn more,
@@ -54,7 +54,7 @@ relationship: many_to_one
   }
   join: mercado {
     type: left_outer
-    sql_on: ${devoluciones.region} = ${mercado.region} ;;
+    sql_on: ${pedidos.id_mercado} = ${mercado.id_mercado} ;;
     relationship: one_to_one
   }
 
