@@ -55,4 +55,10 @@ relationship: many_to_one
     relationship: one_to_one
   }
 
+  join: ranking_de_vendedores {
+    type: left_outer
+    sql_on: ${ranking_de_vendedores.vendedor} = ${vendedores.vendedor} ;;
+    relationship: one_to_one
+  }
+
 }
