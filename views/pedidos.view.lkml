@@ -41,7 +41,7 @@ view: pedidos {
   }
 
   dimension: descuento {
-    hidden:  yes
+
     type: number
     sql: ${TABLE}.Descuento ;;
     value_format_name: usd
@@ -80,7 +80,6 @@ view: pedidos {
   }
 
   dimension: id_cliente {
-    primary_key: yes
     type: string
     sql: ${TABLE}.ID_cliente ;;
   }
@@ -95,14 +94,11 @@ view: pedidos {
   }
 
   dimension: id_mercado {
-    primary_key: yes
-    hidden:  yes
     type: string
     sql: ${TABLE}.Id_Mercado ;;
   }
 
   dimension: id_pedido {
-    hidden:  yes
     primary_key: yes
     type: string
     sql: ${TABLE}.ID_pedido ;;
@@ -110,7 +106,6 @@ view: pedidos {
 
   dimension: id_producto {
     primary_key: yes
-    hidden:  yes
     type: string
     sql: ${TABLE}.ID_producto ;;
   }
