@@ -80,11 +80,13 @@ view: pedidos {
   }
 
   dimension: id_cliente {
-    hidden:  yes
     primary_key: yes
     type: string
     sql: ${TABLE}.ID_cliente ;;
   }
+
+
+
 
   dimension: id_fila {
     hidden:  yes
@@ -134,6 +136,6 @@ view: pedidos {
 
   measure: count {
     type: count
-    drill_fields: []
+    drill_fields: [id_cliente, id_pedido,]
   }
 }
