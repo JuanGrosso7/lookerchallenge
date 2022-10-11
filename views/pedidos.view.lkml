@@ -25,12 +25,15 @@ view: pedidos {
     label: " Ganancia total"
     type: sum
     sql: ${beneficio} ;;
+    value_format_name: usd
   }
 
   measure: average_beneficio {
     label: "Ganancia promedio"
     type: average
-    sql: ${beneficio} ;;
+    sql: ${beneficio}
+    ;;
+    value_format_name: usd
   }
 
   dimension: cantidad {
@@ -43,12 +46,14 @@ view: pedidos {
     label: "Costo del envio"
     type: number
     sql: ${TABLE}.Costo_envio ;;
+    value_format_name: usd
   }
 
   dimension: descuento {
     hidden:  yes
     type: number
     sql: ${TABLE}.Descuento ;;
+    value_format_name: usd
   }
 
   # Dates and timestamps can be represented in Looker using a dimension group of type: time.
@@ -133,6 +138,7 @@ view: pedidos {
     label: "Ventas"
     type: number
     sql: ${TABLE}.Ventas ;;
+    value_format_name: usd
   }
 
   measure: count {
