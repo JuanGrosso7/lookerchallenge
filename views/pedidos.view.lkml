@@ -1,25 +1,16 @@
-# The name of this view in Looker is "Pedidos"
+
 view: pedidos {
-  # The sql_table_name parameter indicates the underlying database table
-  # to be used for all fields in this view.
+
   sql_table_name: `looker_academy.Pedidos`
     ;;
-  # No primary key is defined for this view. In order to join this view in an Explore,
-  # define primary_key: yes on a dimension that has no repeated values.
 
-  # Here's what a typical dimension looks like in LookML.
-  # A dimension is a groupable field that can be used to filter query results.
-  # This dimension will be called "Beneficio" in Explore.
+
 
   dimension: beneficio {
     label: "Ganancia"
     type: number
     sql: ${TABLE}.Beneficio ;;
   }
-
-  # A measure is a field that uses a SQL aggregate function. Here are defined sum and average
-  # measures for this dimension, but you can also add measures of many different aggregates.
-  # Click on the type parameter to see all the options in the Quick Help panel on the right.
 
   measure: total_beneficio {
     label: " Ganancia total"
@@ -56,9 +47,6 @@ view: pedidos {
     value_format_name: usd
   }
 
-  # Dates and timestamps can be represented in Looker using a dimension group of type: time.
-  # Looker converts dates and timestamps to the specified timeframes within the dimension group.
-
   dimension_group: fecha_envio {
     label: "Fecha del envio"
     type: time
@@ -93,6 +81,7 @@ view: pedidos {
 
   dimension: id_cliente {
     hidden:  yes
+    primary_key: yes
     type: string
     sql: ${TABLE}.ID_cliente ;;
   }
@@ -104,6 +93,7 @@ view: pedidos {
   }
 
   dimension: id_mercado {
+    primary_key: yes
     hidden:  yes
     type: string
     sql: ${TABLE}.Id_Mercado ;;
@@ -117,6 +107,7 @@ view: pedidos {
   }
 
   dimension: id_producto {
+    primary_key: yes
     hidden:  yes
     type: string
     sql: ${TABLE}.ID_producto ;;
