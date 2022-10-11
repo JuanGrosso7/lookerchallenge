@@ -30,8 +30,8 @@ view: mercado {
     sql: ${TABLE}.Id_Mercado ;;
   }
 
-  dimension: mercado {label: "Mercado"
-
+  dimension: mercado {
+    label: "Mercado"
     type: string
     sql: ${TABLE}.Mercado ;;
   }
