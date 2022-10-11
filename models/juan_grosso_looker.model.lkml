@@ -34,19 +34,16 @@ explore: pedidos {
     sql_on: ${pedidos.id_pedido} = ${devoluciones.id_pedido};;
 relationship: one_to_one
   }
-
   join: producto {
     type: left_outer
     sql_on: ${pedidos.id_producto} = ${producto.id_producto} ;;
 relationship: many_to_one
   }
-
   join: cliente {
     type: left_outer
     sql_on: ${pedidos.id_cliente} = ${cliente.id_cliente} ;;
 relationship: many_to_one
   }
-
   join: vendedores {
     type: left_outer
     sql_on: ${devoluciones.region} = ${vendedores.region} ;;
