@@ -44,6 +44,7 @@ view: mercado {
 
   dimension: region {
     label: "Región"
+    primary_key: yes
     type: string
     sql: ${TABLE}.Region ;;
   }
