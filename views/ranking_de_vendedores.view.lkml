@@ -22,6 +22,7 @@ view: ranking_de_vendedores {
           2 DESC
       LIMIT 500
        ;;
+
   }
 
   measure: count {
@@ -30,6 +31,7 @@ view: ranking_de_vendedores {
   }
 
   dimension: vendedor {
+    primary_key: yes
     type: string
     sql: ${TABLE}.Vendedor ;;
   }
