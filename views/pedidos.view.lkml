@@ -130,7 +130,7 @@ view: pedidos {
   }
 
   dimension: ventas {
-    label: "Cantidad de ventas"
+    label: "Ventas"
     type: number
     sql: ${TABLE}.Ventas ;;
   }
