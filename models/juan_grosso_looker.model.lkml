@@ -54,7 +54,7 @@ relationship: many_to_one
   }
   join: mercado {
     type: left_outer
-    sql_on: ${vendedores.region} = ${mercado.region} ;;
+    sql_on: ${devoluciones.region} = ${mercado.region} ;;
     relationship: one_to_one
   }
 
